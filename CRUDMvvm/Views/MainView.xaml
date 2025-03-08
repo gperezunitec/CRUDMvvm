@@ -2,11 +2,25 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CRUDMvvm.Views.MainView"
-             Title="MainView">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="Proveedores">
+    <ScrollView>
+        <VerticalStackLayout Padding="10" Spacing="10">
+        <Button Text="Agregar Proveedor" Command="{Binding GotoAddEditViewCommand}"></Button>
+            
+            <Grid Margin="5,5,5,5" RowDefinitions="Auto" ColumnDefinitions="*,*,*,*,*">
+                <Label Text="Id" Grid.Row="0" Grid.Column="0" FontAttributes="Bold"></Label>
+                <Label Text="Nombre" Grid.Row="0" Grid.Column="1" FontAttributes="Bold"></Label>
+                <Label Text="Contacto" Grid.Row="0" Grid.Column="2" FontAttributes="Bold"></Label>
+                <Label Text="Direccion" Grid.Row="0" Grid.Column="3" FontAttributes="Bold"></Label>
+                <Label Text="Telefono" Grid.Row="0" Grid.Column="4" FontAttributes="Bold"></Label>
+            </Grid>
+            <Grid Margin="5,5,5,5" RowDefinitions="Auto" ColumnDefinitions="*,*,*,*,*">
+                <Label Text="0801" Grid.Row="1" Grid.Column="0"></Label>
+                <Label Text="Cadrafter" Grid.Row="1" Grid.Column="1"></Label>
+                <Label Text="Gerardo Perez" Grid.Row="1" Grid.Column="2"></Label>
+                <Label Text="Barrio Las Crucitas" Grid.Row="1" Grid.Column="3"></Label>
+                <Label Text="+504-9999992" Grid.Row="1" Grid.Column="4"></Label>
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

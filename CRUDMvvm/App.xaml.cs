@@ -11,7 +11,7 @@ namespace CRUDMvvm
 
         protected override Window CreateWindow(IActivationState? activationState)
         {
-            return new Window(new ProveedoresView());
+            return new Window(new NavigationPage(new MainView()));
         }
     }
 }
