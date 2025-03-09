@@ -2,22 +2,26 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CRUDMvvm.Views.AddEditView"
+             xmlns:viewModel="clr-namespace:CRUDMvvm.ViewModels"
+             x:DataType="viewModel:AddEditViewModel"
              Title="">
     <VerticalStackLayout Margin="20">
         <Label Text="Id" Grid.Row="0" Grid.Column="0"></Label>
-        <Entry Text="" Keyboard="Text"></Entry>   
+        <Entry Text="{Binding Id}" Keyboard="Numeric"></Entry>   
         
         <Label Text="Nombre" Grid.Row="0" Grid.Column="1"></Label>
-        <Entry Text="" Keyboard="Text"></Entry>   
+        <Entry Text="{Binding Nombre}" Keyboard="Text"></Entry>   
         
         <Label Text="Contacto" Grid.Row="0" Grid.Column="2"></Label>
-        <Entry Text="" Keyboard="Text"></Entry>   
+        <Entry Text="{Binding Contacto}" Keyboard="Text"></Entry>   
         
         <Label Text="Direccion" Grid.Row="0" Grid.Column="3"></Label>
-        <Entry Text="" Keyboard="Text"></Entry>   
+        <Entry Text="{Binding Direccion}" Keyboard="Text"></Entry>   
         
         <Label Text="Telefono" Grid.Row="0" Grid.Column="4"></Label>
-        <Entry Text="" Keyboard="Text"></Entry>   
+        <Entry Text="{Binding Telefono}" Keyboard="Text"></Entry>   
+        
+        <Button Text="Guardar" Background="Green"></Button>
         
     </VerticalStackLayout>
 </ContentPage>

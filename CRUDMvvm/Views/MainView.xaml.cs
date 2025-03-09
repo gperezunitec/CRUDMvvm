@@ -11,4 +11,12 @@ public partial class MainView : ContentPage
 		viewModel = new MainViewModel();
 		BindingContext = viewModel;
 	}
+
+	protected override void OnAppearing()
+	{
+		base.OnAppearing();
+		viewModel.GetAll();
+	}
+	
+	
 }
