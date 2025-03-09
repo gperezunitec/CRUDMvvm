@@ -58,6 +58,26 @@ public partial class AddEditViewModel:ObservableObject
                 Telefono = Telefono,
             };
 
+
+            if (Proveedor.Nombre is null||Proveedor.Nombre=="" )
+            {
+                Alerta("Advertencia","Ingrese el nombre completo");
+            }
+            else
+            {
+                if (Id==0)
+                {
+                    _service.Insert(Proveedor);
+                }
+                else
+                {
+                    _service.Update(Proveedor);
+                }
+                await App.Current!.MainPage!.Navigation.PopAsync();
+            }
+            
+            
+
             if (Id==0)
             {
                 _service.Insert(Proveedor);

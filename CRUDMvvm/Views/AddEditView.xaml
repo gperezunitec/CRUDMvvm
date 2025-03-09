@@ -21,7 +21,7 @@
         <Label Text="Telefono" Grid.Row="0" Grid.Column="4"></Label>
         <Entry Text="{Binding Telefono}" Keyboard="Text"></Entry>   
         
-        <Button Text="Guardar" Background="Green"></Button>
+        <Button Text="Guardar" Background="Green" Command="{Binding AddUpdateCommand}"></Button>
         
     </VerticalStackLayout>
 </ContentPage>
